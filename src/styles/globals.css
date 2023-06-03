@@ -3,10 +3,23 @@
 @tailwind utilities;
 
 .testing{
+  position: relative;
   background-image: url('/background.png');
-  background-blend-mode: luminosity;
+  /* background-blend-mode: luminosity; */
   background-size: cover;
 }
+.testing::before {
+ content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent; /* Set the desired color for the overlay */
+  opacity: 0.2; /* Set the desired opacity value for the overlay */
+  mix-blend-mode: luminosity;
+}
+
 .dropWhite {
   filter: drop-shadow(0 0 1.3rem rgba(113, 225, 235, 0.5));
 }

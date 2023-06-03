@@ -38,6 +38,7 @@ const Index = () => {
                 router.pathname === "/home" ? "pt-44" : "md:pt-16 pt-24"
               }  flex flex-col items-center mx-auto justify-center gap-5 testing`}
             >
+              {/* <div className="overlay"></div> */}
               <p className="text-md font-axiforma px-12">
                 Over 60 million devices get hacked every year.
               </p>

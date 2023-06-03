@@ -30,7 +30,7 @@ const ComingSoon = () => {
 
   return (
     <div className="bg-backComingSoon min-h-screen bg-no-repeat bg-cover">
-      <div className="grid lg:grid-cols-2 pt-8 text-white content-between">
+      <div className="grid lg:grid-cols-2 pt-8 text-white content-between min-h-screen">
         <div className="px-8 col-span-2 md:col-span-1">
           <Image src={luraLogo} alt="luraLogo" />
           <h1 className="md:text-[54px] text-4xl leading-snug mt-6 w-[90%] font-anglecia ">
@@ -54,7 +54,7 @@ const ComingSoon = () => {
               <input
                 name="waitList"
                 placeholder="Enter your email address"
-                className="text-sm pl-2 w-full py-3 font-normal rounded-sm"
+                className="text-sm pl-2 w-full py-3 font-normal rounded-sm text-black"
               />
               <button className="font-medium py-2 md:text-md text-sm bg-[#5D18EB]">
                 Notify Me when Lura is Live
@@ -74,7 +74,7 @@ const ComingSoon = () => {
             </div>
           </div>
         </div>
-        <div className="mt-2 flex justify-between px-8 col-span-2 bg-black py-2 text-xs text-[#B7B7B7]">
+        <div className="mt-auto flex justify-between px-8 col-span-2 bg-black py-2 text-xs text-[#B7B7B7]">
           <p>© Melanie and salsa inc</p>
           <p>Support@luravpn.com</p>
           <div className="flex justify-between gap-6">
