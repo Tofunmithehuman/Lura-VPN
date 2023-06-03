@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.testing{
+  background-image: url('/background.png');
+  background-blend-mode: luminosity;
+  background-size: cover;
+}
+.dropWhite {
+  filter: drop-shadow(0 0 1.3rem rgba(113, 225, 235, 0.5));
+}
+.highShadow {
+  filter: drop-shadow(0 0 0.4rem #379aff);
+}
+.ultraShadow {
+  filter: drop-shadow(0 0 0.4rem #00ff79);
+}
+.multipleShadow {
+  filter: drop-shadow(0 0 0.4rem #7f63d1);
+}
+.highBorder {
+  border: none;
+  background: linear-gradient(to bottom, #aed6ff 55%, #000000);
+  background-clip: padding-box;
+}
+.planBorder {
+  border: none;
+  background: linear-gradient(to right, #5d18eb, #c87351);
+  background-clip: padding-box;
+}
+.ultraBorder {
+  border: none;
+  background: linear-gradient(to bottom, #00ff79 15%, #000000);
+  background-clip: padding-box;
+}
+.multipleBorder {
+  border: none;
+  background: linear-gradient(to top, #a38cee 15%, #000000);
+  background-clip: padding-box;
+}
+.subscribeBorder {
+  border: none;
+  background: linear-gradient(to bottom, #a38cee 15%, #000000);
+  background-clip: padding-box;
+}
+.termsBorder {
+  border: none;
+  background: linear-gradient(to bottom, #000000 35%, #a38cee);
+  background-clip: padding-box;
+}
+.desktopBorder {
+  border: none;
+  background: linear-gradient(to top, rgb(172, 85, 239, 0.5) 50%, #a38cee);
+  background-clip: padding-box;
+}
+.desktopRadial {
+  background: linear-gradient(to top left, #000000 50%, rgba(36, 33, 46, 0.7));
+}
+.securityGradient {
+  background: linear-gradient(to top right, #000000 40%, rgba(40, 9, 2, 1));
+}
+.termsGradient {
+  background: linear-gradient(to top right, #000000 40%, rgba(2, 40, 4, 1));
+}
+.privacyGradient {
+  background: linear-gradient(to top right, #000000 40%, rgba(24, 2, 40, 1));
+}
+.faqGradient {
+  background: linear-gradient(to top, rgba(2, 13, 40, 1), rgba(48, 8, 64, 0));
+}
+.plansGradient {
+  background: linear-gradient(to top left, #020d28 40%, rgba(48, 8, 64, 0));
+}
+.experienceGradient {
+  background: linear-gradient(to top, rgb(1, 17, 15), rgba(48, 8, 64, 0));
+}
+.subscribeBg {
+  background-image: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0.83),
+    rgba(53, 10, 88, 1)
+  );
+}
+
+.pageReveal {
+  animation: fadein 3s forwards;
+}
+.carousel {
+  animation: marquee 40s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
