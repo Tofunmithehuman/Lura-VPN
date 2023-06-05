@@ -9,27 +9,27 @@ const faqs1 = [
 const faqs2 = [
   { question: "Is Lura available for individuals?" },
   { question: "How much does it cost to use Lura?" },
-  { question: "This line is for any other question?" },
-  { question: "More questions here and here?" },
+  { question: "How does Lura work?" },
+  { question: "What does unlimited bandwidth mean?" },
 ];
 const faqs3 = [
   { question: "Is Lura available for individuals?" },
   { question: "How much does it cost to use Lura?" },
-  { question: "More questions here and here?" },
+  { question: "How does Lura work?" },
 ];
 const faqs4 = [
   { question: "Is Lura available for individuals?" },
   { question: "How much does it cost to use Lura?" },
-  { question: "More questions here and here?" },
+  { question: "What does unlimited bandwidth mean?" },
 ];
 
 export default function Faq() {
   const router = useRouter();
 
   return (
-    <div className="w-full block justify-center py-20">
+    <div className="w-full block justify-center py-8 sm:py-20">
       <h1
-        className={`text-5xl w-[90%] mx-auto leading-relaxed text-center pb-16 font-anglecia ${
+        className={`text-[32px] sm:text-[40px] w-[90%] mx-auto leading-relaxed text-center pb-8 sm:pb-16 font-anglecia ${
           router.pathname === "/home" ? "text-white" : "text-[#C9F4EA]"
         }`}
       >
@@ -46,13 +46,13 @@ export default function Faq() {
             <Disclosure key={index}>
               {({ open }) => (
                 <div className="relative">
-                  <Disclosure.Button className="flex gap-4 w-full rounded-lg px-4 py-8 text-left text-lg font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                  <Disclosure.Button className="flex gap-4 w-full rounded-lg px-4 py-8 text-left text-[16px] font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                     {open ? (
                       <FiMinus className="h-6 w-6 text-[#71E1EB]" />
                     ) : (
                       <FiPlus className="h-6 w-6 text-[#71E1EB]" />
                     )}
-                    <span>{check.question}</span>
+                    <span className="capitalize">{check.question}</span>
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-4 text-sm text-white">
                     The accordion component delivers large amounts of content in
@@ -81,13 +81,13 @@ export default function Faq() {
             <Disclosure key={index}>
               {({ open }) => (
                 <div className="relative">
-                  <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-lg font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                  <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-[16px] font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                     {open ? (
                       <FiMinus className="h-6 w-6 text-[#71E1EB]" />
                     ) : (
                       <FiPlus className="h-6 w-6 text-[#71E1EB]" />
                     )}
-                    <span>{check.question}</span>
+                    <span className="capitalize">{check.question}</span>
                   </Disclosure.Button>
                   <Disclosure.Panel className="px-4 pt-4 pb-4 text-sm text-white">
                     The accordion component delivers large amounts of content in
@@ -120,13 +120,13 @@ export default function Faq() {
                 <Disclosure key={index}>
                   {({ open }) => (
                     <div className="relative">
-                      <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-lg font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-[16px] font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         {open ? (
                           <FiMinus className="h-6 w-6 text-[#71E1EB]" />
                         ) : (
                           <FiPlus className="h-6 w-6 text-[#71E1EB]" />
                         )}
-                        <span>{check.question}</span>
+                        <span className="capitalize">{check.question}</span>
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-4 text-sm text-white">
                         The accordion component delivers large amounts of
@@ -158,13 +158,13 @@ export default function Faq() {
                 <Disclosure key={index}>
                   {({ open }) => (
                     <div className="relative">
-                      <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-lg font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+                      <Disclosure.Button className="flex gap-4 w-full rounded-lg  px-4 py-8 text-left text-[16px] font-medium text-white focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                         {open ? (
                           <FiMinus className="h-6 w-6 text-[#71E1EB]" />
                         ) : (
                           <FiPlus className="h-6 w-6 text-[#71E1EB]" />
                         )}
-                        <span>{check.question}</span>
+                        <span className="capitalize">{check.question}</span>
                       </Disclosure.Button>
                       <Disclosure.Panel className="px-4 pt-4 pb-4 text-sm text-white">
                         The accordion component delivers large amounts of

@@ -4,6 +4,7 @@ import luraLogo from "../../public/LURa.svg";
 import Link from "next/link";
 import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
+import { AiFillCheckSquare } from "react-icons/ai";
 const SignIn = () => {
   return (
     <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative">
@@ -62,10 +63,13 @@ const SignIn = () => {
               </div>
             </div>
             <div className="flex justify-between text-xs">
-              <div>Remember Me</div>
+              <div className="flex gap-1 items-center rounded-md">
+                <AiFillCheckSquare className="text-[#10C971] text-lg" />
+                <div>Remember Me</div>
+              </div>
               <Link
                 href={"/forgetPassword"}
-                className="font-semibold text-white"
+                className="font-semibold text-white underline"
               >
                 Forgot password?
               </Link>

@@ -23,6 +23,7 @@ module.exports = {
         back404: "url('/404Page.png')",
         back404Man: "url('/404Man.png')",
         backComingSoon: "url('/ComingSoonBg.svg')",
+        backComingSoonBgMobile: "url('/ComingSoonBgMobile.svg')",
       },
     },
   },

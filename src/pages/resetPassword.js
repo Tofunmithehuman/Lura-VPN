@@ -18,7 +18,7 @@ const RPassword = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Image src={luraLogo} alt="lura" className="mx-auto" />
 
-          <h2 className="mt-20 text-center text-3xl font-medium leading-9 tracking-tight">
+          <h2 className="mt-20 text-center text-lg sm:text-[32px] font-medium leading-9 tracking-tight">
             Reset Your Password
           </h2>
           <p className="text-xs mt-2 text-center">

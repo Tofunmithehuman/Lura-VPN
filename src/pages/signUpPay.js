@@ -11,9 +11,9 @@ const SignUpPay = () => {
   return (
     <Layout>
       <div className="grid md:grid-cols-2 text-white font-axiforma plansGradient pt-10">
-        <div className="px-6 bg-">
+        <div>
           <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
               <div className="grid grid-cols-4 justify-between mb-4">
                 <Image
                   src={creditCard}
@@ -150,8 +150,8 @@ const SignUpPay = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center">
-          <div className="bg-[#151414] rounded-2xl p-8 pb-40 w-4/6 relative">
+        <div className="flex justify-center items-center sm:w-full sm:max-w-xl">
+          <div className="bg-[#151414] rounded-2xl p-8 pb-40 w-5/6 sm:w-4/6 relative">
             <div className="flex items-center justify-between">
               <p>Selected Plan</p>
               <p className="text-[#A38CEE] text-xs">Change Plan</p>

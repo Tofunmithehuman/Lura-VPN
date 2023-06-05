@@ -37,10 +37,10 @@ const FeaturesExp = () => {
   const imageSource2 = isHovered3 ? desktop2 : desktop;
 
   return (
-    <div className="block justify-center sm:px-24 px-12 experienceGradient py-20">
-      <h3 className="text-5xl w-[75%] mx-auto leading-relaxed text-center pb-16 font-anglecia">
-        Launch your browsing experience to new heights.
-      </h3>
+    <div className="block justify-center sm:px-24 px-6 experienceGradient py-20">
+      <h1 className="text-[28px] sm:text-[40px] sm:w-[65%] mb-8 sm:mx-auto leading-relaxed text-center font-anglecia">
+        Launch Your Browsing Experience to New Heights.
+      </h1>
       <div className="grid sm:grid-cols-[0.7fr,2fr] gap-8 gap-y-8 font-axiforma text-md">
         <div className="highBorder p-[1px] rounded-xl">
           <div className="rounded-xl px-6 flex flex-col items-center pb-24 bg-black pt-4 h-full">
@@ -59,9 +59,9 @@ const FeaturesExp = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-rows-2 gap-8 bg-black rounded-xl">
+        <div className="grid grid-rows-2 gap-12 bg-black rounded-xl">
           <div className="ultraBorder p-[1px] rounded-xl">
-            <div className=" px-6 grid sm:grid-cols-[1.2fr,2fr] h-full gap-4 pt-4 rounded-xl bg-black">
+            <div className=" px-6 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 py-4 rounded-xl bg-black">
               <div className="flex flex-col gap-8">
                 <p className=" my-4 px-8 py-4 rounded-lg w-full bg-black mr-auto text-sm text-center font-medium ultraShadow">
                   Ultra Secure
@@ -75,8 +75,7 @@ const FeaturesExp = () => {
                 />
               </div>
               <div className="flex items-center">
-                <p className="leading-relaxed w-[82%] mt-4 text-[#AFB7C5]">
-                  Say goodbye to opportunistic hackers and shameless scammers.
+                <p className="leading-relaxed sm:w-[82%] mt-4 text-[#AFB7C5]">
                   Our cutting-edge and robust encryption system keeps your
                   sensitive data private and secure.
                 </p>
@@ -84,7 +83,7 @@ const FeaturesExp = () => {
             </div>
           </div>
           <div className="multipleBorder p-[1px] rounded-xl">
-            <div className=" px-6 pb-24 grid sm:grid-cols-[1.2fr,2fr] h-full gap-4 rounded-xl bg-black">
+            <div className=" px-6 pb-24 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 py-4 rounded-xl bg-black">
               <div className="flex flex-col gap-8">
                 <p className=" my-4 px-8 py-4 rounded-lg w-full bg-black mr-auto text-sm text-center font-medium multipleShadow ">
                   Multiple Devices
@@ -98,7 +97,7 @@ const FeaturesExp = () => {
                 />
               </div>
               <div className="flex items-center">
-                <p className="leading-relaxed w-[82%] mt-4 text-[#AFB7C5]">
+                <p className="leading-relaxed sm:w-[82%] mt-4 text-[#AFB7C5]">
                   Stay secure and connected on all your devices effortlessly.
                 </p>
               </div>

@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
     <div className="relative">
       {router.pathname === "/home" ? <IPcheck /> : null}
       <NavBar />
-      <main className="bg-[#000000] bg-blend-luminosity">
+      <main className="bg-[#000000]">
         {children}
         {!planPage && <Footer />}
       </main>

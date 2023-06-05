@@ -57,13 +57,13 @@ const NavBar = () => {
             </div>
           )}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center font-semibold gap-6 text-sm text-white">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center font-semibold gap-6 text-md text-white">
           <Link href={"/signIn"} className="text-[#B7B7B7]">
-            Sign In
+            Login
           </Link>
           <Link
             href={"/signUp"}
-            className="border text-black bg-white text-md  px-8 py-3 text-lg rounded-md dropWhite"
+            className="border text-black bg-white px-8 py-3 text-lg rounded-lg dropWhite"
           >
             Sign Up{" "}
           </Link>{" "}
@@ -76,8 +76,8 @@ const NavBar = () => {
         onClose={setMobileMenuOpen}
       >
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black  px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-black px-6 pt-12 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between pb-6">
             <span className="sr-only">Your Company</span>
             <Image className=" w-28" src={luraLogo} alt="lura logo" />
             <button
@@ -86,7 +86,7 @@ const NavBar = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <RiCloseLine className="text-3xl" aria-hidden="true" />
+              <RiCloseLine className="text-4xl" aria-hidden="true" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -96,21 +96,21 @@ const NavBar = () => {
                   <Link
                     key={item.name}
                     href={item.to}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-semibold leading-7 text-[#B7B7B7]"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-medium leading-7 text-white"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
-                <div className="flex lg:flex-1 items-center mt-auto flex-col lg:flex-row font-semibold gap-3 text-md text-white">
-                  <Link href={"/signIn"} className="text-[#B7B7B7]">
-                    Sign In
+              <div className="pt-10">
+                <div className="flex lg:flex-1 items-center mt-auto flex-col lg:flex-row font-semibold gap-3 text-lg text-white">
+                  <Link href={"/signIn"} className="text-white">
+                    Login
                   </Link>
                   <Link
                     href={"/signUp"}
-                    className="border text-black bg-white text-md mt-5 px-8 py-3 rounded-md dropWhite"
+                    className="border text-black bg-white text-lg mt-5 px-8 py-3 rounded-lg dropWhite"
                   >
                     Sign Up{" "}
                   </Link>{" "}

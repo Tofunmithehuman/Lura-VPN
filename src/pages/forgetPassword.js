@@ -6,7 +6,7 @@ import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
 const FPassword = () => {
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative">
+    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative font-axiforma">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -17,7 +17,7 @@ const FPassword = () => {
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <Image src={luraLogo} alt="lura" className="mx-auto" />
 
-          <h2 className="mt-20 text-center text-3xl font-medium leading-9 tracking-tight">
+          <h2 className="mt-20 text-center text-lg sm:text-[32px] font-medium leading-9 tracking-tight">
             Enter Your Email
           </h2>
           <p className="text-xs mt-2 text-center">
@@ -41,7 +41,7 @@ const FPassword = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>

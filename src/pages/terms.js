@@ -120,7 +120,7 @@ const Terms = () => {
           </div>
           <div className=" grid justify-center">
             <div className="p-[1px] termsBorder rounded-2xl">
-              <div className="min-h-40 hidden md:grid rounded-2xl bg-[#151414] p-6 text-xs px-10 justify-center gap-6 font-medium">
+              <div className="min-h-40 hidden md:grid rounded-2xl bg-[#151414] p-6 text-sm capitalize px-10 justify-center gap-6 font-medium">
                 <div className="flex items-center gap-2">
                   <BsCheckLg className="text-green-500" />
                   <p>Terms of service</p>

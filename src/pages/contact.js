@@ -5,8 +5,8 @@ const Contact = () => {
   return (
     <Layout>
       <div className="min-h-screen py-16">
-        <h1 className="text-5xl leading-relaxed text-center py-16 font-anglecia text-[#C9F4EA]">
-          Contact us
+        <h1 className="text-5xl text-[32px] leading-relaxed text-center py-16 font-anglecia text-[#C9F4EA]">
+          Contact Us
         </h1>
         <div className="lg:w-4/6 w-5/6 bg-[#F8FBFF] rounded-xl min-h-[70vh] mx-auto font-axiforma font-medium">
           <h2 className="text-xl pl-16 pt-10">Send a Message</h2>
@@ -103,7 +103,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="flex rounded-md bg-[#5D18EB] px-10 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5D18EB]"
+                className="flex rounded-md bg-[#5D18EB] px-16 py-3 mx-auto sm:mx-0 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5D18EB]"
               >
                 Send Message
               </button>
