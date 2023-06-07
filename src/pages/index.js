@@ -29,7 +29,7 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className="sm:bg-backComingSoon bg-backComingSoonBgMobile min-h-screen bg-no-repeat bg-cover">
+    <div className="bg-black sm:bg-backComingSoon bg-backComingSoonBgMobile min-h-screen bg-no-repeat bg-cover">
       <div className="grid lg:grid-cols-2 pb-8 sm:pb-0 pt-8 text-white content-between min-h-screen">
         <div className="px-8 col-span-2 md:col-span-1">
           <Image src={luraLogo} alt="luraLogo" />
@@ -56,12 +56,12 @@ const ComingSoon = () => {
                 placeholder="Enter your email address"
                 className="text-sm pl-2 w-full py-4 font-normal md:rounded-sm rounded-lg text-black"
               />
-              <button className="font-medium py-4 md:text-md text-sm rounded-r-lg  bg-[#5D18EB]">
+              <button className="font-medium py-4 md:text-md text-sm rounded-lg sm:rounded-r-lg sm:rounded-none  bg-[#5D18EB]">
                 Notify Me when Lura is Live
               </button>
             </form>
           </div>
-          <div className="mt-4 font-axiforma mx-auto">
+          <div className="my-4 font-axiforma">
             <p className="font-light md:text-3xl text-[43px]">
               {`
               ${countdown.days} : ${String(countdown.hours).padStart(2, "0")} :

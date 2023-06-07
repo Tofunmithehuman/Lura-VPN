@@ -133,7 +133,7 @@ const Privacy = () => {
                 <p className="text-[#3E3F3E]">Information we collect</p>
                 <p className="text-[#3E3F3E]">How we use </p>
                 <p className="text-[#3E3F3E]">Cookie Policy </p>
-                <p className="text-[#3E3F3E]">Legal and privacy faq </p>
+                <p className="text-[#3E3F3E]">Legal and privacy FAQ </p>
                 <p className="text-[#3E3F3E]">Compliance </p>
                 <p className="text-[#3E3F3E]">Security Measures </p>
                 <p className="text-[#3E3F3E]">Open source software</p>

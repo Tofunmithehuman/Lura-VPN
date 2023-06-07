@@ -4,6 +4,7 @@
 
 .testing{
   position: relative;
+  background-color: #000000;
   background-image: url('/background.png');
   background-blend-mode: luminosity;
   background-size: cover;
@@ -13,13 +14,13 @@
   filter: drop-shadow(0 0 1.3rem rgba(113, 225, 235, 0.5));
 }
 .highShadow {
-  filter: drop-shadow(0 0 0.4rem #379aff);
+  filter: drop-shadow(0 0 0.5rem rgba(55, 154, 255, 0.3));
 }
 .ultraShadow {
-  filter: drop-shadow(0 0 0.4rem #00ff79);
+  filter: drop-shadow(0 0 0.5rem rgba(0, 255, 121, 0.33));
 }
 .multipleShadow {
-  filter: drop-shadow(0 0 0.4rem #7f63d1);
+  filter: drop-shadow(0 0 0.5rem rgba(127, 99, 209, 0.3));
 }
 .highBorder {
   border: none;
@@ -76,7 +77,7 @@
   background: linear-gradient(to top right, #000000 40%, rgba(24, 2, 40, 1));
 }
 .faqGradient {
-  background: linear-gradient(to top, rgba(2, 13, 40, 1), rgba(48, 8, 64, 0));
+  background: linear-gradient(to top right, #000000 40%, rgb(3, 13, 38));
 }
 .plansGradient {
   background: linear-gradient(to top left, #020d28 40%, rgba(48, 8, 64, 0));
@@ -96,7 +97,7 @@
   animation: fadein 3s forwards;
 }
 .carousel {
-  animation: marquee 40s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 @keyframes marquee {
   0% {

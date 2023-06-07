@@ -6,8 +6,8 @@ import { IoMdClose } from "react-icons/io";
 const ChoosePlan = () => {
   return (
     <div>
-      <div className="p-[1px] planBorder mx-20 rounded-2xl">
-        <div className="rounded-2xl bg-[#191919] md:grid gap-8 p-16 font-axiforma hidden">
+      <div className="p-[1px] planBorder rounded-2xl hidden md:block">
+        <div className="rounded-2xl bg-[#191919] md:grid gap-8 p-16 font-axiforma">
           <div className=" grid grid-cols-4 justify-items-center">
             <div></div>
             <div className="text-[16px] font-medium text-[#4F5665]">
@@ -75,19 +75,19 @@ const ChoosePlan = () => {
             <div></div>
             <Link
               href={"/signUpPay"}
-              className="px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
+              className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
             >
               Buy Now
             </Link>
             <Link
               href={"/signUpPay"}
-              className="px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
+              className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
             >
               Buy Now
             </Link>
             <Link
               href={"/signUpPay"}
-              className="px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
+              className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
             >
               Buy Now
             </Link>
@@ -96,7 +96,7 @@ const ChoosePlan = () => {
       </div>
       <div className="grid gap-6">
         <div className="p-[1px] planBorder  rounded-[19px] md:hidden">
-          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma py-10 px-6 text-center ">
+          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma py-10 px-6 max-[290px]:px-3 text-center ">
             <div className="text-[16px] font-medium text-[#4F5665]">
               3-Day Trial
             </div>
@@ -153,7 +153,7 @@ const ChoosePlan = () => {
           </div>
         </div>
         <div className="p-[1px] planBorder  rounded-[19px] md:hidden">
-          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma p-10 text-center ">
+          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma py-10 px-6 max-[290px]:px-3 text-center ">
             <div className="text-[16px] font-medium text-[#4F5665]">
               Monthly Subscription
             </div>
@@ -210,7 +210,7 @@ const ChoosePlan = () => {
           </div>
         </div>
         <div className="p-[1px] planBorder  rounded-[19px] md:hidden">
-          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma p-10 text-center ">
+          <div className="md:mx-12 rounded-[19px] bg-[#191919] grid font-axiforma py-10 px-6 max-[290px]:px-3 text-center ">
             <div className="text-[16px] font-medium text-[#4F5665]">
               Yearly Subscription
             </div>

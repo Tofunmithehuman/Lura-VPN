@@ -49,7 +49,11 @@ const NavBar = () => {
                 <Link
                   key={item.name}
                   href={item.to}
-                  className="text-sm font-semibold leading-6 text-[#B7B7B7]"
+                  className={`text-sm leading-6  ${
+                    router.pathname === item.to
+                      ? "text-white font-bold"
+                      : "text-[#B7B7B7] font-semibold"
+                  }`}
                 >
                   {item.name}
                 </Link>

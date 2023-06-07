@@ -24,6 +24,7 @@ module.exports = {
         back404Man: "url('/404Man.png')",
         backComingSoon: "url('/ComingSoonBg.svg')",
         backComingSoonBgMobile: "url('/ComingSoonBgMobile.svg')",
+        backGridLine: "url('/gridLine.svg')",
       },
     },
   },

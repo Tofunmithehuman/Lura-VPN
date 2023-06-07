@@ -10,7 +10,7 @@ import Layout from "@/layout/Layout";
 const SignUpPay = () => {
   return (
     <Layout>
-      <div className="grid md:grid-cols-2 text-white font-axiforma plansGradient pt-10">
+      <div className="flex flex-col-reverse sm:grid sm:grid-cols-2 text-white font-axiforma plansGradient pt-10">
         <div>
           <div className="flex min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
@@ -150,37 +150,39 @@ const SignUpPay = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center sm:w-full sm:max-w-xl">
-          <div className="bg-[#151414] rounded-2xl p-8 pb-40 w-5/6 sm:w-4/6 relative">
-            <div className="flex items-center justify-between">
-              <p>Selected Plan</p>
-              <p className="text-[#A38CEE] text-xs">Change Plan</p>
+          <div className="flex justify-center items-center sm:w-full sm:max-w-xl mt-16 sm:mt-0">
+            <div className="bg-[#151414] rounded-2xl p-8 pb-40 w-5/6 sm:w-4/6 relative">
+              <div className="flex items-center justify-between">
+                <p>Selected Plan</p>
+                <p className="text-[#A38CEE] text-xs cursor-pointer">
+                  Change Plan
+                </p>
+              </div>
+              <div className="flex gap-4 items-center my-10">
+                <h2 className="text-2xl">Free</h2>
+                <p className="text-[#4F5665] text-xs font-semibold">
+                  3-day trial
+                </p>
+              </div>
+              <div className="flex items-center text-sm gap-2 mb-8">
+                <BsCheckCircleFill className="text-[#00FF79]" />
+                <p>Unlimited Bandwidth</p>
+              </div>
+              <div className="flex items-center text-sm gap-2 mb-8">
+                <BsCheckCircleFill className="text-[#00FF79]" />
+                <p>Encrypted Connection</p>
+              </div>
+              <div className="flex items-center text-sm gap-2 mb-8">
+                <BsCheckCircleFill className="text-[#00FF79]" />
+                <p>Works on all Devices</p>
+              </div>
+              <Image
+                src={cone}
+                alt="cone"
+                className="absolute right-0 top-[6em]"
+              />
             </div>
-            <div className="flex gap-4 items-center my-10">
-              <h2 className="text-2xl">Free</h2>
-              <p className="text-[#4F5665] text-xs font-semibold">
-                3-day trial
-              </p>
-            </div>
-            <div className="flex items-center text-sm gap-2 mb-8">
-              <BsCheckCircleFill className="text-[#00FF79]" />
-              <p>Unlimited Bandwidth</p>
-            </div>
-            <div className="flex items-center text-sm gap-2 mb-8">
-              <BsCheckCircleFill className="text-[#00FF79]" />
-              <p>Encrypted Connection</p>
-            </div>
-            <div className="flex items-center text-sm gap-2 mb-8">
-              <BsCheckCircleFill className="text-[#00FF79]" />
-              <p>Works on all Devices</p>
-            </div>
-            <Image
-              src={cone}
-              alt="cone"
-              className="absolute right-0 top-[6em]"
-            />
           </div>
-        </div>
       </div>
     </Layout>
   );
