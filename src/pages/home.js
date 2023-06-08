@@ -121,7 +121,7 @@ const Index = () => {
             </div>
 
             <div className="bg-black h-28 sm:h-40 w-[90%] overflow-hidden box-border relative mx-auto my-12">
-              <div className="block w-[200%] absolute carousel max-[290px]:text-xl text-2xl sm:text-[40px] font-anglecia my-16">
+              <div className="block w-[200%] absolute carousel max-[290px]:text-xl text-2xl md:text-[30px] lg:text-[40px] font-anglecia my-16">
                 <span className=" float-left w-full sm:w-1/2">
                   <div className="bg-gradient-to-r from-[rgba(255,255,255,1)] to-[rgba(163,140,238,1)] text-transparent bg-clip-text inline-block w-[33%] float-left transition-all duration-75 ease-out">
                     More Content
@@ -133,7 +133,7 @@ const Index = () => {
                     Faster Loading
                   </div>
                 </span>
-                <span className=" float-left w-1/2 hidden sm:block">
+                <span className=" float-left w-1/2 hidden md:block">
                   <div className="bg-gradient-to-r from-[rgba(255,255,255,1)] to-[rgba(163,140,238,1)] text-transparent bg-clip-text inline-block w-[33%] float-left transition-all duration-75 ease-out">
                     More Content
                   </div>

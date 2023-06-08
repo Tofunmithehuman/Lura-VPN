@@ -29,7 +29,7 @@ const ComingSoon = () => {
   }, []);
 
   return (
-    <div className="bg-black sm:bg-backComingSoon bg-backComingSoonBgMobile min-h-screen bg-no-repeat bg-cover overflow-hidden">
+    <div className="bg-black sm:bg-backComingSoon bg-backComingSoonBgMobile min-h-screen bg-no-repeat bg-cover">
       <div className="grid lg:grid-cols-2 pb-8 sm:pb-0 pt-8 text-white content-between min-h-screen">
         <div className="px-8 col-span-2 md:col-span-1">
           <Image src={luraLogo} alt="luraLogo" />
