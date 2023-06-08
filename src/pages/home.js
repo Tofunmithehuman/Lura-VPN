@@ -146,7 +146,9 @@ const Index = () => {
                 </span>
               </div>
             </div>
-            <FeaturesExp />
+            <div id="features">
+              <FeaturesExp />
+            </div>
             <div className="block justify-center py-20">
               <h1 className="text-[25px] sm:text-[40px] px-6 sm:w-[65%] sm:mx-auto leading-relaxed text-center font-anglecia">
                 Advanced Data Encryption for a Cosmic Digital Experience.
@@ -182,7 +184,10 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="block justify-center py-20 px-6 sm:px-12 sm:bg-backVpn sm:bg-no-repeat bg-contain sm:bg-bottom">
+            <div
+              className="block justify-center py-20 px-6 sm:px-12 sm:bg-backVpn sm:bg-no-repeat bg-contain sm:bg-bottom"
+              id="pricing"
+            >
               <h1 className="md:text-5xl text-[32px] sm:w-[90%] mx-auto leading-relaxed text-center mb-8 font-anglecia">
                 Choose Your VPN Plan
               </h1>

@@ -53,7 +53,7 @@ const FeaturesExp = () => {
               onMouseEnter={handleHover}
               onMouseLeave={handleMouseLeave}
             />
-            <p className="pt-16 text-[#AFB7C5] text-sm sm:text-lg">
+            <p className="pt-4 text-[#AFB7C5] text-sm sm:text-lg">
               Roam the internet undelayed and uninterrupted with our
               lightning-fast servers.
             </p>
@@ -61,7 +61,7 @@ const FeaturesExp = () => {
         </div>
         <div className="grid grid-rows-2 gap-12 bg-black rounded-xl">
           <div className="ultraBorder p-[1px] rounded-xl">
-            <div className=" px-6 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 py-4 rounded-xl bg-black">
+            <div className=" px-6 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 pt-4 pb-24 sm:pb-4 rounded-xl bg-black">
               <div className="flex flex-col gap-8">
                 <p className=" my-4 px-8 py-4 rounded-lg w-full bg-black mr-auto text-center font-bold ultraShadow">
                   Ultra Secure
@@ -83,7 +83,7 @@ const FeaturesExp = () => {
             </div>
           </div>
           <div className="multipleBorder p-[1px] rounded-xl">
-            <div className=" px-6 pb-24 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 py-4 rounded-xl bg-black">
+            <div className=" px-6 grid sm:grid-cols-[1.2fr,2fr] h-full gap-y-8 gap-4 pt-4 pb-24 sm:pb-4 rounded-xl bg-black">
               <div className="flex flex-col gap-8">
                 <p className=" my-4 px-8 py-4 rounded-lg w-full bg-black mr-auto text-center font-bold multipleShadow ">
                   Multiple Devices

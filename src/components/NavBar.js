@@ -8,8 +8,8 @@ import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Home", to: "/home" },
-  { name: "Features", to: "/features" },
-  { name: "Pricing", to: "/pricing" },
+  { name: "Features", to: "#features" },
+  { name: "Pricing", to: "#pricing" },
   { name: "Help", to: "/help" },
 ];
 
@@ -100,7 +100,11 @@ const NavBar = () => {
                   <Link
                     key={item.name}
                     href={item.to}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-lg font-medium leading-7 text-white"
+                    className={`-mx-3 block rounded-lg px-3 py-2 text-lg font-medium leading-7 ${
+                      router.pathname === item.to
+                        ? "text-white font-bold"
+                        : "text-[#B7B7B7] font-semibold"
+                    }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}

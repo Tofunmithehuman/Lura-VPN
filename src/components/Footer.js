@@ -48,8 +48,8 @@ const Footer = () => {
         <ul className="flex flex-col gap-8 text-sm text-[rgba(183,183,183,1)] ">
           <h3 className="font-bold text-md text-white">Company</h3>
           <Link href={"/home"}>Home</Link>
-          <Link href={"/features"}>Features</Link>
-          <Link href={"/pricing"}>Pricing</Link>
+          <Link href={"#features"}>Features</Link>
+          <Link href={"#pricing"}>Pricing</Link>
           <Link href={"/help"}>Help</Link>
         </ul>
         <ul className="flex flex-col gap-8 text-sm text-[rgba(183,183,183,1)]">

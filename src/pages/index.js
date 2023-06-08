@@ -30,10 +30,10 @@ const ComingSoon = () => {
 
   return (
     <div className="bg-black sm:bg-backComingSoon bg-backComingSoonBgMobile min-h-screen bg-no-repeat bg-cover">
-      <div className="grid lg:grid-cols-2 pb-8 sm:pb-0 pt-8 text-white content-between min-h-screen">
+      <div className="grid lg:grid-cols-2 sm:pb-0 pt-8 text-white min-h-screen">
         <div className="px-8 col-span-2 md:col-span-1">
           <Image src={luraLogo} alt="luraLogo" />
-          <h1 className="md:text-[54px] text-4xl leading-snug mt-6 sm:w-[90%] font-anglecia font-mediun ">
+          <h1 className="md:text-[54px] text-4xl leading-snug mt-6 sm:w-[90%] font-anglecia font-medium ">
             Discover the future of{" "}
             <span className="bg-gradient-to-r from-[#7F31FF] to-[#E34607] text-transparent bg-clip-text">
               Online privacy
@@ -74,13 +74,15 @@ const ComingSoon = () => {
             </div>
           </div>
         </div>
-        <div className="mt-auto hidden sm:flex justify-between font-semibold px-8 col-span-2 bg-black py-2 text-xs text-[#B7B7B7]">
-          <p>© Melanie and salsa inc</p>
-          <p>Support@luravpn.com</p>
-          <div className="flex justify-between gap-6">
-            <SiTwitter />
-            <FaFacebookF />
-            <ImInstagram />
+        <div className="mt-auto col-span-2 h-full">
+          <div className="mt-auto flex flex-wrap gap-y-4 justify-between font-semibold px-8 bg-black py-2 text-xs text-[#B7B7B7]">
+            <p>© Melanie and salsa inc</p>
+            <p>support@luravpn.com</p>
+            <div className="flex justify-between gap-6">
+              <SiTwitter />
+              <FaFacebookF />
+              <ImInstagram />
+            </div>
           </div>
         </div>
       </div>
