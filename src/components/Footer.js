@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SiTwitter } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
+import {LuInstagram} from 'react-icons/lu'
 import Image from "next/image";
 import playstore from "../../public/playstore.png";
 import appstore from "../../public/appstore.png";
@@ -66,7 +67,7 @@ const Footer = () => {
           <div className="flex justify-between w-full md:w-auto">
             <SiTwitter />
             <FaFacebookF />
-            <ImInstagram />
+            <LuInstagram />
           </div>
         </ul>
       </div>

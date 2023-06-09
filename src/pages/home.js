@@ -210,19 +210,22 @@ const Index = () => {
                   <Image src={worldMap2} alt="worldMap" className="w-full" />
                 </div>
                 <div className="flex flex-col md:flex-row items-center gap-y-16 justify-evenly font-axiforma font-semibold">
-                  <div className="ml-4 md:ml-0">
+                  <div className="ml-4 md:ml-0 relative">
+                    <div className="h-5 sm:h-6 w-[1.5px] bg-[#71E1EB] absolute -left-4 top-1"></div>
                     <h2 className="text-2xl sm:text-3xl">1000+ 📍</h2>
                     <p className="text-[#767676] text-sm sm:text-lg">
                       Servers Across the Globe
                     </p>
                   </div>
-                  <div>
+                  <div className="relative">
+                    <div className="h-5 sm:h-6 w-[1.5px] bg-[#71E1EB] absolute -left-4 top-1"></div>
                     <h2 className="text-2xl sm:text-3xl">20 🌏</h2>
                     <p className="text-[#767676] text-sm sm:text-lg">
                       Connected Countries
                     </p>
                   </div>
-                  <div>
+                  <div className="relative">
+                    <div className="h-5 sm:h-6 w-[1.5px] bg-[#71E1EB] absolute -left-4 top-1"></div>
                     <h2 className="text-2xl sm:text-3xl">1000+ ♾️</h2>
                     <p className="text-[#767676] text-sm sm:text-lg">
                       Unlimited Bandwidth

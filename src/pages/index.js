@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import { SiTwitter } from "react-icons/si";
+import {LuInstagram} from 'react-icons/lu'
 import { FaFacebookF } from "react-icons/fa";
-import { ImInstagram } from "react-icons/im";
 
 const ComingSoon = () => {
   const targetDate = new Date("2023-08-30"); // Replace with your target date
@@ -40,7 +40,7 @@ const ComingSoon = () => {
             </span>{" "}
             with LuraVPN.
           </h1>
-          <div className="w-[75%] md:w-[65%] md:text-sm font-axiforma font-light mt-6">
+          <div className="w-[75%] md:w-[85%] md:text-[16px] font-axiforma font-light mt-6">
             <p>
               Our advanced VPN service harnesses the power of AI and machine
               learning algorithms to safeguard your data.
@@ -62,7 +62,7 @@ const ComingSoon = () => {
             </form>
           </div>
           <div className="my-4 font-axiforma">
-            <p className="font-light md:text-3xl text-[43px]">
+            <p className="font-light md:text-[35px] text-[43px]">
               {`
               ${countdown.days} : ${String(countdown.hours).padStart(2, "0")} :
               ${String(countdown.minutes).padStart(2, "0")}`}
@@ -74,16 +74,14 @@ const ComingSoon = () => {
             </div>
           </div>
         </div>
-        <div className="mt-auto col-span-2 h-full">
-          <div className="mt-auto flex flex-wrap gap-y-4 justify-between font-semibold px-8 bg-black py-2 text-xs text-[#B7B7B7]">
+          <div className="mt-auto col-span-2 flex flex-wrap gap-y-4 justify-between font-semibold px-8 bg-black py-3 text-sm text-[#B7B7B7]">
             <p>© Melanie and salsa inc</p>
-            <p>support@luravpn.com</p>
-            <div className="flex justify-between gap-6">
+            <p className="order-last sm:order-2">support@luravpn.com</p>
+            <div className="flex justify-between gap-6 text-white sm:order-3">
               <SiTwitter />
               <FaFacebookF />
-              <ImInstagram />
+              <LuInstagram />
             </div>
-          </div>
         </div>
       </div>
     </div>
