@@ -33,7 +33,9 @@ const RPassword = () => {
                 <input
                   id="otp1"
                   name="otp"
-                  type="number"
+                  type="text"
+                  maxLength="1"
+                  pattern="[0-9]"
                   autoComplete="otp"
                   required
                   className="block w-[20%] bg-[#636363] border rounded-md py-4 sm:text-4xl text-center sm:leading-6"
@@ -41,7 +43,9 @@ const RPassword = () => {
                 <input
                   id="otp2"
                   name="otp"
-                  type="number"
+                  type="text"
+                  pattern="[0-9]"
+                  maxLength="1"
                   autoComplete="otp"
                   required
                   className="block w-[20%] bg-[#636363] border rounded-md py-4 sm:text-4xl text-center sm:leading-6"
@@ -49,7 +53,9 @@ const RPassword = () => {
                 <input
                   id="otp3"
                   name="otp"
-                  type="number"
+                  type="text"
+                  pattern="[0-9]"
+                  maxLength="1"
                   autoComplete="otp"
                   required
                   className="block w-[20%] bg-[#636363] border rounded-md py-4 sm:text-4xl text-center sm:leading-6"
@@ -57,7 +63,9 @@ const RPassword = () => {
                 <input
                   id="otp3"
                   name="otp"
-                  type="number"
+                  type="text"
+                  pattern="[0-9]"
+                  maxLength="1"
                   autoComplete="otp"
                   required
                   className="block w-[20%] bg-[#636363] border rounded-md py-4 sm:text-4xl text-center sm:leading-6"
