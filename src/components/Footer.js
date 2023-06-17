@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="w-5/6 md:w-[60%] mx-auto">
               <div className="grid sm:grid-cols-[1.5fr,1fr]">
                 <input
-                  className="my-5 sm:my-0 py-4 pl-2 rounded-lg sm:rounded-l-lg sm:rounded-none placeholder:font-medium placeholder:text-black"
+                  className="my-5 sm:my-0 py-4 pl-2 rounded-lg sm:rounded-l-lg sm:rounded-none placeholder:font-medium placeholder:text-black text-black"
                   placeholder="Enter Email Address"
                 />
                 <div

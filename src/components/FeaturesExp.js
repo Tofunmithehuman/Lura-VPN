@@ -63,7 +63,7 @@ const FeaturesExp = () => {
                 </p>
                 <Image src={wings2} alt="wings" className="w-[50%] mx-auto" />
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center pt-16">
                 <p className="leading-relaxed sm:w-[82%] text-sm sm:text-lg mt-4 text-[#AFB7C5] py-16">
                   Our cutting-edge and robust encryption system keeps your
                   sensitive data private and secure.
@@ -83,7 +83,7 @@ const FeaturesExp = () => {
                   className="w-[60%] mx-auto"
                 />
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center pt-20">
                 <p className="leading-relaxed sm:w-[82%] text-sm sm:text-lg mt-4 text-[#AFB7C5]">
                   Stay secure and connected on all your devices effortlessly.
                 </p>
