@@ -16,17 +16,26 @@ module.exports = {
     extend: {
       backgroundImage: {
         backImg: "url('/background.png')",
+        backCube: "url('/cube2.png')",
+        backSpec: "url('/spec2.png')",
+        backCone: "url('/cone2.png')",
         backVpn: "url('/choosePlan.png')",
         backMoon: "url('/moon.png')",
-        backMoonFooter: "url('/moonFooter.png')",
+        backMoonFooter: "url('/moonFooter.svg')",
+        backMoonFooterMobile: "url('/moonFooterMobile.png')",
+        backMoonFooter2: "url('/moonFooter2.png')",
         backSubscribe: "url('/subscribeBack.png')",
         back404: "url('/404Page.png')",
         back404Man: "url('/404Man.png')",
         backComingSoon: "url('/ComingSoonBg.svg')",
-        backComingSoonBgMobile: "url('/ComingSoonBgMobile.svg')",
+        backGalaxyComingMobile: "url('/galaxyComingMobile.png')",
         backGridLine: "url('/gridLine.svg')",
+        backGalaxyComing: "url('/galaxyComing.png')",
+        backManWalkMoon: "url('/manWalkMoon.svg')",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")
+  ],
 };

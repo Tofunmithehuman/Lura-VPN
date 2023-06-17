@@ -8,37 +8,37 @@ import accelerate from "../../public/accelerate.png";
 import accelerate2 from "../../public/accelerate2.gif";
 
 const FeaturesExp = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [isHovered2, setIsHovered2] = useState(false);
-  const [isHovered3, setIsHovered3] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered2, setIsHovered2] = useState(false);
+  // const [isHovered3, setIsHovered3] = useState(false);
 
-  const handleHover = () => {
-    setIsHovered(true);
-  };
-  const handleHover2 = () => {
-    setIsHovered2(true);
-  };
-  const handleHover3 = () => {
-    setIsHovered3(true);
-  };
+  // const handleHover = () => {
+  //   setIsHovered(true);
+  // };
+  // const handleHover2 = () => {
+  //   setIsHovered2(true);
+  // };
+  // const handleHover3 = () => {
+  //   setIsHovered3(true);
+  // };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-  const handleMouseLeave2 = () => {
-    setIsHovered2(false);
-  };
-  const handleMouseLeave3 = () => {
-    setIsHovered3(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setIsHovered(false);
+  // };
+  // const handleMouseLeave2 = () => {
+  //   setIsHovered2(false);
+  // };
+  // const handleMouseLeave3 = () => {
+  //   setIsHovered3(false);
+  // };
 
-  const imageSource = isHovered ? accelerate2 : accelerate;
-  const imageSource1 = isHovered2 ? wings2 : wings;
-  const imageSource2 = isHovered3 ? desktop2 : desktop;
+  // const imageSource = isHovered ? accelerate2 : accelerate;
+  // const imageSource1 = isHovered2 ? wings2 : wings;
+  // const imageSource2 = isHovered3 ? desktop2 : desktop;
 
   return (
-    <div className="block justify-center sm:px-12 px-6 experienceGradient py-20">
-      <h1 className="text-[28px] sm:text-[40px] sm:w-[65%] mb-8 sm:mx-auto leading-relaxed text-center font-anglecia">
+    <div className="block justify-center sm:px-12 px-6 py-20">
+      <h1 className="text-[28px] sm:text-[40px] sm:w-[65%] mb-8 sm:mx-auto leading-relaxed text-center font-normal font-axiforma">
         Launch Your Browsing Experience to New Heights.
       </h1>
       <div className="grid sm:grid-cols-[0.7fr,2fr] gap-8 gap-y-8 font-axiforma text-lg">
@@ -47,12 +47,7 @@ const FeaturesExp = () => {
             <p className=" my-4 px-8 py-4 rounded-lg bg-black text-center w-full font-bold highShadow">
               High Speed
             </p>
-            <Image
-              src={imageSource}
-              alt="accelerate"
-              onMouseEnter={handleHover}
-              onMouseLeave={handleMouseLeave}
-            />
+            <Image src={accelerate2} alt="accelerate" />
             <p className="pt-4 text-[#AFB7C5] text-sm sm:text-lg">
               Roam the internet undelayed and uninterrupted with our
               lightning-fast servers.
@@ -66,13 +61,7 @@ const FeaturesExp = () => {
                 <p className=" my-4 px-8 py-4 rounded-lg w-full bg-black mr-auto text-center font-bold ultraShadow">
                   Ultra Secure
                 </p>
-                <Image
-                  src={imageSource1}
-                  alt="wings"
-                  className="w-[50%] mx-auto"
-                  onMouseEnter={handleHover2}
-                  onMouseLeave={handleMouseLeave2}
-                />
+                <Image src={wings2} alt="wings" className="w-[50%] mx-auto" />
               </div>
               <div className="flex items-center">
                 <p className="leading-relaxed sm:w-[82%] text-sm sm:text-lg mt-4 text-[#AFB7C5] py-16">
@@ -89,11 +78,9 @@ const FeaturesExp = () => {
                   Multiple Devices
                 </p>
                 <Image
-                  src={imageSource2}
+                  src={desktop2}
                   alt="desktop"
                   className="w-[60%] mx-auto"
-                  onMouseEnter={handleHover3}
-                  onMouseLeave={handleMouseLeave3}
                 />
               </div>
               <div className="flex items-center">

@@ -6,7 +6,7 @@ import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
 const FPassword = () => {
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative font-axiforma">
+    <div className="bg-black text-white bg-backMoonFooter2 bg-bottom bg-no-repeat bg-contain relative font-axiforma">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -41,7 +41,7 @@ const FPassword = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md border-0 py-2.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2.5 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>

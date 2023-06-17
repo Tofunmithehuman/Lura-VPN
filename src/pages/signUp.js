@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import Link from "next/link";
 import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
+import { AiOutlineEye } from "react-icons/ai";
 const SignUp = () => {
+  const [show, setShow] = useState(false);
+  const showPassword = () => {
+    setShow(!show);
+  };
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain font-axiforma relative">
+    <div className="bg-black text-white bg-backMoonFooter2 bg-bottom bg-no-repeat bg-contain font-axiforma relative">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -90,14 +95,18 @@ const SignUp = () => {
                   Password
                 </label>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={show ? "text" : "password"}
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 relative"
+                />
+                <AiOutlineEye
+                  className="absolute right-2 top-3 text-[#757575] cursor-pointer"
+                  onClick={showPassword}
                 />
               </div>
             </div>
@@ -110,14 +119,18 @@ const SignUp = () => {
                   Verify Password
                 </label>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   id="vpassword"
                   name="vpassword"
-                  type="password"
+                  type={show ? "text" : "password"}
                   autoComplete="verify-password"
                   required
-                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 relative"
+                />
+                <AiOutlineEye
+                  className="absolute right-2 top-3 text-[#757575] cursor-pointer"
+                  onClick={showPassword}
                 />
               </div>
             </div>
@@ -136,7 +149,7 @@ const SignUp = () => {
             Already have an account?{" "}
             <Link
               href={"/signIn"}
-              className="font-semibold leading-6 text-[#5D18EB] hover:text-indigo-600"
+              className="font-semibold leading-6 text-[#5D18EB] hover:text-indigo-600 underline"
             >
               Sign In
             </Link>

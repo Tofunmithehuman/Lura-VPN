@@ -6,7 +6,7 @@ const Privacy = () => {
   return (
     <Layout>
       <div className="privacyGradient py-16 px-8 md:px-20 text-white font-axiforma">
-        <h1 className="text-5xl w-[90%] mx-auto leading-relaxed text-center py-16 font-anglecia text-[#C9F4EA]">
+        <h1 className="text-3xl sm:text-5xl w-[90%] mx-auto leading-relaxed text-center py-8 sm:py-16 font-axiforma text-[#C9F4EA]">
           Privacy
         </h1>
         <div className="grid md:grid-cols-[1.2fr,1fr] items-start">

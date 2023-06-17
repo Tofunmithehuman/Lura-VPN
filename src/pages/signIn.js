@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import Link from "next/link";
 import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
-import { AiFillCheckSquare } from "react-icons/ai";
+import { AiFillCheckSquare, AiOutlineEye } from "react-icons/ai";
+
 const SignIn = () => {
+  const [show, setShow] = useState(false);
+  const showPassword = () => {
+    setShow(!show);
+  };
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative">
+    <div className="bg-black text-white bg-backMoonFooter2 bg-bottom bg-no-repeat bg-contain relative">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -37,7 +42,7 @@ const SignIn = () => {
                   type="email"
                   autoComplete="email"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -51,20 +56,28 @@ const SignIn = () => {
                   Password
                 </label>
               </div>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   id="password"
                   name="password"
-                  type="password"
+                  type={show ? "text" : "password"}
                   autoComplete="current-password"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 relative"
+                />
+                <AiOutlineEye
+                  className="absolute right-2 top-3 text-[#757575] cursor-pointer"
+                  onClick={showPassword}
                 />
               </div>
             </div>
             <div className="flex justify-between text-xs">
-              <div className="flex gap-1 items-center rounded-md">
-                <AiFillCheckSquare className="text-[#10C971] text-lg" />
+              <div className="flex gap-1 items-center rounded-md relative">
+                {/* <AiFillCheckSquare className="text-[#10C971] text-lg" /> */}
+                <input
+                  type="checkbox"
+                  className="rounded border-gray-300 text-[#10C971] outline-none"
+                />
                 <div>Remember Me</div>
               </div>
               <Link
@@ -88,7 +101,7 @@ const SignIn = () => {
             Don`t have an Account?{" "}
             <Link
               href={"/signUp"}
-              className="font-semibold leading-6 text-[#5D18EB]"
+              className="font-semibold leading-6 text-[#5D18EB] underline"
             >
               Sign up
             </Link>

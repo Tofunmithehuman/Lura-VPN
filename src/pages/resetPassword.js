@@ -7,7 +7,7 @@ import cube from "../../public/cube.png";
 
 const RPassword = () => {
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative">
+    <div className="bg-black text-white bg-backMoonFooter2 bg-bottom bg-no-repeat bg-contain relative">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -29,7 +29,7 @@ const RPassword = () => {
         <div className="mt-12 sm:mx-auto sm:w-full sm:max-w-sm z-20">
           <form className="space-y-6" action="#" method="POST">
             <div className="mb-12 ">
-              <div className="mt-2 flex items-center justify-between">
+              <div className="mt-2 flex items-center justify-between text-white">
                 <input
                   id="otp1"
                   name="otp"

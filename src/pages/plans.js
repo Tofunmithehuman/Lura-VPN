@@ -5,7 +5,7 @@ import React from "react";
 const Plans = () => {
   return (
     <Layout>
-      <div className="min-h-screen plansGradient text-white pb-28 pt-32 px-6">
+      <div className="min-h-screen plansGradient text-white pb-28 pt-32">
         <h1 className="md:text-5xl text-4xl w-[90%] mx-auto leading-relaxed text-center pb-16 font-anglecia">
           Choose Your VPN Plan
         </h1>

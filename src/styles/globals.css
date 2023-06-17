@@ -6,16 +6,16 @@ html {
   scroll-behavior: smooth;
 }
 
-.testing{
+.testing {
   position: relative;
   background-color: #000000;
-  background-image: url('/background.png');
+  background-image: url("/background.png");
   background-blend-mode: luminosity;
   background-size: cover;
 }
 
 .dropWhite {
-  filter: drop-shadow(0 0 1.3rem rgba(113, 225, 235, 0.5));
+  filter: drop-shadow(0 0 1rem rgba(113, 225, 235, 0.3));
 }
 .highShadow {
   filter: drop-shadow(0 0 0.5rem rgba(55, 154, 255, 0.3));
@@ -46,13 +46,18 @@ html {
   background: linear-gradient(to top, #a38cee 15%, #000000);
   background-clip: padding-box;
 }
-@media (max-width: 640px) { 
-  .multipleBorder {
+.multipleBorder2 {
   border: none;
-  background: linear-gradient(to bottom, #a38cee 15%, #000000);
+  background: linear-gradient(to top, #a38cee 15%, #000000);
   background-clip: padding-box;
 }
- }
+@media (max-width: 640px) {
+  .multipleBorder {
+    border: none;
+    background: linear-gradient(to bottom, #a38cee 15%, #000000);
+    background-clip: padding-box;
+  }
+}
 .subscribeBorder {
   border: none;
   background: linear-gradient(to bottom, #a38cee 15%, #000000);
@@ -63,13 +68,17 @@ html {
   background: linear-gradient(to bottom, #000000 35%, #a38cee);
   background-clip: padding-box;
 }
-.desktopBorder {
+/* .desktopBorder {
   border: none;
   background: linear-gradient(to top, rgb(172, 85, 239, 0.5) 50%, #a38cee);
   background-clip: padding-box;
-}
+} */
 .desktopRadial {
-  background: linear-gradient(to top left, #000000 50%, rgba(36, 33, 46, 0.7));
+  background: linear-gradient(
+    to bottom right,
+    rgb(17, 2, 24) 5%,
+    rgba(48, 8, 64, 0)
+  );
 }
 .securityGradient {
   background: linear-gradient(to top right, #000000 40%, rgba(40, 9, 2, 1));
@@ -80,11 +89,14 @@ html {
 .privacyGradient {
   background: linear-gradient(to top right, #000000 40%, rgba(24, 2, 40, 1));
 }
+.footerGradient {
+  background: linear-gradient(to top, #000000 80%, rgba(0, 0, 0, 0.05));
+}
 .faqGradient {
   background: linear-gradient(to top right, #000000 40%, rgb(3, 13, 38));
 }
 .plansGradient {
-  background: linear-gradient(to top left, #020d28 40%, rgba(48, 8, 64, 0));
+  background: linear-gradient(to top left, #020d28 10%, rgba(4, 0, 6, 0));
 }
 .experienceGradient {
   background: linear-gradient(to top, rgb(1, 17, 15), rgba(48, 8, 64, 0));

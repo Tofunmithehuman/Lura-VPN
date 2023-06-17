@@ -19,8 +19,8 @@ const IPcheck = () => {
   }, [])
 
   return (
-    <div className="absolute text-[#B7B7B7]  md:pr-8 md:left-[10%] lg:px-0 lg:left-[20%] left-2 md:top-[1.7em] top-4 z-50 block">
-      <div className="block font-axiforma font-medium text-center w-4/5 sm:w-full mx-auto text-xs sm:text-[16px]">
+      <div className="flex justify-center font-axiforma font-medium text-center w-4/5 sm:w-full mx-auto text-xs sm:text-[16px]">
+    <div className="absolute text-[#B7B7B7]  md:top-[1.7em] top-4 z-50 block px-8">
         🌐 Your IP: {ip.ip}. 📡 ISP: {ip.isp}. 🔰 Your Status:{" "}
         <span
           className={

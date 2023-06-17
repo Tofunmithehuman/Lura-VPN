@@ -1,13 +1,19 @@
-import React from "react";
+import React,{useState} from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import Link from "next/link";
 import spec from "../../public/spec.png";
 import cube from "../../public/cube.png";
+import { AiOutlineEye } from "react-icons/ai";
+
 
 const NPassword = () => {
+   const [show, setShow] = useState(false);
+   const showPassword = () => {
+     setShow(!show);
+   };
   return (
-    <div className="bg-black text-white bg-backMoonFooter bg-bottom bg-no-repeat bg-contain relative">
+    <div className="bg-black text-white bg-backMoonFooter2 bg-bottom bg-no-repeat bg-contain relative">
       <div className="backSpec absolute right-[10%] top-[25%]">
         <Image src={spec} alt="spec" />
       </div>
@@ -35,18 +41,22 @@ const NPassword = () => {
               >
                 New Password
               </label>
-              <div className="mt-2">
+              <div className="mt-2 relative">
                 <input
                   id="password"
                   name="password"
-                  type="password"
-                  autoComplete="password"
+                  type={show ? "text" : "password"}
+                  autoComplete="current-password"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 relative"
+                />
+                <AiOutlineEye
+                  className="absolute right-2 top-3 text-[#757575] cursor-pointer"
+                  onClick={showPassword}
                 />
               </div>
             </div>
-            <div>
+            <div className="mb-4">
               <div className="flex items-center justify-between">
                 <label
                   htmlFor="password"
@@ -55,18 +65,22 @@ const NPassword = () => {
                   Verify Password
                 </label>
               </div>
-              <div className="mt-2 mb-16">
+              <div className="mt-2 mb-4 relative">
                 <input
                   id="vpassword"
                   name="vpassword"
-                  type="password"
+                  type={show ? "text" : "password"}
                   autoComplete="verify-password"
                   required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-2 pl-2 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 relative"
+                />
+                <AiOutlineEye
+                  className="absolute right-2 top-3 text-[#757575] cursor-pointer"
+                  onClick={showPassword}
                 />
               </div>
             </div>
-            <Link href={"/signIn"} className="">
+            <Link href={"/signIn"} className="mt-2">
               <button
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-[#5D18EB] px-3 py-2.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#5D18EB]"

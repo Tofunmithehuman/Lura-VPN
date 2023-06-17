@@ -31,7 +31,9 @@ const NavBar = () => {
         <div className="flex items-center justify-between w-full lg:w-auto gap-x-12">
           <div className="flex lg:flex-1">
             <span className="sr-only">Your Company</span>
-            <Image className=" w-28" src={luraLogo} alt="lura logo" />
+            <Link href={'/home'}>
+              <Image className=" w-28" src={luraLogo} alt="lura logo" />
+            </Link>
           </div>
           <div className="flex lg:hidden ml-auto">
             <button
@@ -51,7 +53,7 @@ const NavBar = () => {
                   href={item.to}
                   className={`text-sm leading-6  ${
                     router.pathname === item.to
-                      ? "text-white font-bold"
+                      ? "text-white font-bold underline"
                       : "text-[#B7B7B7] font-semibold"
                   }`}
                 >
@@ -67,7 +69,7 @@ const NavBar = () => {
           </Link>
           <Link
             href={"/signUp"}
-            className="border text-black bg-white px-8 py-3 text-lg rounded-lg dropWhite"
+            className="border text-white bg-[#5D18EB] border-none px-8 py-3 text-lg rounded-lg dropWhite"
           >
             Sign Up{" "}
           </Link>{" "}
@@ -102,7 +104,7 @@ const NavBar = () => {
                     href={item.to}
                     className={`-mx-3 block rounded-lg px-3 py-2 text-lg font-medium leading-7 ${
                       router.pathname === item.to
-                        ? "text-white font-bold"
+                        ? "text-white font-bold underline"
                         : "text-[#B7B7B7] font-semibold"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
@@ -118,7 +120,7 @@ const NavBar = () => {
                   </Link>
                   <Link
                     href={"/signUp"}
-                    className="border text-black bg-white text-lg mt-5 px-8 py-3 rounded-lg dropWhite"
+                    className="border text-white bg-[#5D18EB] border-none text-lg mt-5 px-8 py-3 rounded-lg dropWhite"
                   >
                     Sign Up{" "}
                   </Link>{" "}
