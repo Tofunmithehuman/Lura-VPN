@@ -1,20 +1,46 @@
-import React,{useState} from "react";
+import React, { useState, useRef } from "react";
 import luraLogo from "../../public/LURa.svg";
 import Link from "next/link";
 import { SiTwitter } from "react-icons/si";
 import { FaFacebookF } from "react-icons/fa";
 import { ImInstagram } from "react-icons/im";
-import {LuInstagram} from 'react-icons/lu'
+import { LuInstagram } from "react-icons/lu";
 import Image from "next/image";
 import playstore from "../../public/playstore.png";
 import appstore from "../../public/appstore.png";
 import { useRouter } from "next/router";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
   const router = useRouter();
   const [subscribe, setSubscribe] = useState(false);
 
-  const isHomePage = router.pathname === "/home" || router.pathname === "/contact";
+  const isHomePage =
+    router.pathname === "/home" || router.pathname === "/contact";
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tpzmvkf",
+        "template_nam4zt6",
+        form.current,
+        "uvq3fuFRXafvsKCGC"
+      )
+      .then(
+        (result) => {
+          e.target.reset();
+          console.log("message sent");
+          setSubscribe(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <div className="font-axiforma bg-black text-white mt-24 ">
@@ -39,26 +65,41 @@ const Footer = () => {
             <h2 className="text-3xl sm:mb-8 font-axiforma text-center w-[75%] mx-auto sm:w-full">
               Subscribe to Our Newsletter
             </h2>
-            <div className="w-5/6 md:w-[60%] mx-auto">
+            <form
+              className="w-5/6 md:w-[60%] mx-auto"
+              ref={form}
+              onSubmit={sendEmail}
+            >
               <div className="grid sm:grid-cols-[1.5fr,1fr]">
                 <input
                   className="my-5 sm:my-0 py-4 pl-2 rounded-lg sm:rounded-l-lg sm:rounded-none placeholder:font-medium placeholder:text-black text-black"
                   placeholder="Enter Email Address"
+                  name="user_email"
+                  type="email"
+                  required
                 />
-                <div
+                <button
                   className={`${
                     subscribe ? "bg-[#636363]" : "bg-[#5D18EB]"
                   } py-4 text-center font-medium text-lg rounded-lg sm:rounded-r-lg sm:rounded-none cursor-pointer`}
-                  onClick={() => setSubscribe(!subscribe)}
+                  type="submit"
                 >
                   {subscribe ? "Subscribed" : "Subscribe"}
-                </div>
+                </button>
               </div>
-            </div>
+            </form>
           </div>
         )}
-        <div className={`grid justify-items-center ${isHomePage ? 'sm:p-20' : 'pt-80'}`}>
-          <Image src={luraLogo} alt="luraLogo" className={`w-40 sm:w-60 ${!isHomePage ? 'mt-32': 'mt-12'}`} />
+        <div
+          className={`grid justify-items-center ${
+            isHomePage ? "sm:p-20" : "pt-80"
+          }`}
+        >
+          <Image
+            src={luraLogo}
+            alt="luraLogo"
+            className={`w-40 sm:w-60 ${!isHomePage ? "mt-32" : "mt-12"}`}
+          />
           <div className="flex gap-1 items-center mt-8">
             <Image src={appstore} alt="appstore" className="w-32 sm:w-44" />
             <Image src={playstore} alt="playstore" className="w-32 sm:w-44" />

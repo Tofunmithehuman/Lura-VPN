@@ -1,15 +1,42 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineCheck } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
 import Image from "next/image";
+import { checkout } from "@/checkout";
+import { loadStripe } from "@stripe/stripe-js";
+import { useRouter } from "next/router";
 
 const ChoosePlan = () => {
+  const router = useRouter();
+  const { success, canceled } = router.query;
+  // Make sure to call `loadStripe` outside of a component’s render to avoid
+  // recreating the `Stripe` object on every render.
+  const stripePromise = loadStripe(
+    process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+  );
+  useEffect(() => {
+    // Check to see if this is a redirect back from Checkout
+    if (success !== undefined || canceled !== undefined) {
+      if (success) {
+        console.log("Order placed! You will receive an email confirmation.");
+      }
+      if (canceled) {
+        console.log(
+          "Order canceled -- continue to shop around and checkout when you’re ready."
+        );
+      }
+    }
+  }, [success, canceled]);
   return (
     <div className="bg-backCube bg-left-top bg-no-repeat border border-black">
       <div className="bg-backCone bg-center sm:bg-[right_7rem] bg-no-repeat">
         <div className="bg-backSpec bg-right-bottom bg-no-repeat">
-          <div className="rounded-2xl bg-[#191919] bg-opacity-80 md:grid gap-8 p-16 font-axiforma sm:mx-24 mt-12 mb-44 hidden ">
+          <form
+            action="/api/checkout_sessions"
+            method="POST"
+            className="rounded-2xl bg-[#191919] bg-opacity-80 md:grid gap-8 p-16 font-axiforma sm:mx-24 mt-12 mb-44 hidden "
+          >
             <div className=" grid grid-cols-4 justify-items-center">
               <div></div>
               <div className="text-[16px] font-medium text-[#4F5665]">
@@ -85,26 +112,29 @@ const ChoosePlan = () => {
             </div>
             <div className=" grid grid-cols-4 justify-items-center">
               <div></div>
-              <Link
-                href={"/signUpPay"}
+              <button
+                className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
+                type="submit"
+                role="link"
+              >
+                Buy Now
+              </button>
+              <button
+                type="submit"
+                role="link"
                 className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
               >
                 Buy Now
-              </Link>
-              <Link
-                href={"/signUpPay"}
+              </button>
+              <button
+                type="submit"
+                role="link"
                 className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
               >
                 Buy Now
-              </Link>
-              <Link
-                href={"/signUpPay"}
-                className="px-8 lg:px-16 py-4 text-sm rounded-md bg-[#5D18EB]"
-              >
-                Buy Now
-              </Link>
+              </button>
             </div>
-          </div>
+          </form>
           <div className="grid gap-6">
             <div className="md:mx-12 rounded-[19px] bg-[#191919] bg-opacity-80 grid font-axiforma py-10 px-6 max-[290px]:px-3 text-center mt-16 mx-6 md:hidden">
               <div className="text-[16px] font-medium text-[#4F5665]">

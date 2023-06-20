@@ -1,7 +1,30 @@
 import Layout from "@/layout/Layout";
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tpzmvkf",
+        "template_nam4zt6",
+        form.current,
+        "uvq3fuFRXafvsKCGC"
+      )
+      .then(
+        (result) => {
+          e.target.reset()
+          console.log('message sent');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <Layout>
       <div className="min-h-screen py-16">
@@ -12,8 +35,8 @@ const Contact = () => {
           <h2 className="text-xl pl-16 pt-10">Send a Message</h2>
           <form
             className="space-y-6 py-10 md:px-16 px-6"
-            action="#"
-            method="POST"
+            ref={form}
+            onSubmit={sendEmail}
           >
             <div className="grid sm:grid-cols-2 gap-8">
               <div>
@@ -23,7 +46,7 @@ const Contact = () => {
                 <div className="mt-2">
                   <input
                     id="firstName"
-                    name="firstName"
+                    name="first_name"
                     type="text"
                     autoComplete="firstName"
                     required
@@ -37,8 +60,8 @@ const Contact = () => {
                 </label>
                 <div className="mt-2">
                   <input
-                    id="lastName"
-                    name="lastName"
+                    id="last_name"
+                    name="last_name"
                     type="text"
                     autoComplete="lastName"
                     required
@@ -55,7 +78,7 @@ const Contact = () => {
                 <div className="mt-2">
                   <input
                     id="email"
-                    name="email"
+                    name="user_email"
                     type="email"
                     autoComplete="email"
                     required
@@ -73,7 +96,7 @@ const Contact = () => {
                 <div className="mt-2">
                   <input
                     id="phone"
-                    name="phone"
+                    name="user_phone"
                     type="tel"
                     autoComplete="phone-number"
                     required

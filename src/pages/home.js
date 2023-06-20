@@ -39,7 +39,9 @@ const Index = () => {
           <div className="text-white relative pageReveal">
             <div
               className={`min-h-screen ${
-                router.pathname === "/home" ? "pt-44" : "md:pt-16 pt-24"
+                router.pathname === "/home"
+                  ? "pt-36 sm:pt-44"
+                  : "md:pt-16 pt-20"
               }  flex flex-col items-center mx-auto justify-center gap-5 testing relative`}
             >
               <Image
@@ -105,7 +107,7 @@ const Index = () => {
               <p className="font-axiforma text-lg px-6 text-center">
                 Over 60 million devices get hacked every year.
               </p>
-              <h1 className="md:text-[54px] text-[28px] text-center md:w-[60%] my-12 sm:my-0 font-normal mx-auto leading-snug font-axiforma px-4 sm:px-6 ">
+              <h1 className="md:text-[54px] text-[28px] text-center md:w-[60%]  my-6 sm:my-0 font-normal mx-auto leading-snug font-axiforma px-4 sm:px-6 ">
                 Secure Your{" "}
                 <span className="bg-gradient-to-r from-[#E34607] to-[#7F31FF] text-transparent bg-clip-text">
                   Online Privacy
@@ -183,23 +185,12 @@ const Index = () => {
                   />
                 </div>
                 <div className="flex flex-col sm:flex-row gap-1 items-center justify-center">
-                  <Image
-                    src={appstore}
-                    alt="appstore"
-                    className="w-44"
-                  />
-                  <Image
-                    src={playstore}
-                    alt="playstore"
-                    className="w-44"
-                  />
+                  <Image src={appstore} alt="appstore" className="w-44" />
+                  <Image src={playstore} alt="playstore" className="w-44" />
                 </div>
               </div>
             </div>
-            <div
-              className="block justify-center mt-20"
-              id="pricing"
-            >
+            <div className="block justify-center mt-20" id="pricing">
               <h1 className="md:text-4xl text-[32px] sm:w-[90%] sm:mx-auto mx-6 leading-relaxed text-center font-axiforma">
                 Choose Your VPN Plan
               </h1>

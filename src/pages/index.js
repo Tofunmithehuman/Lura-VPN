@@ -1,11 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import { SiTwitter } from "react-icons/si";
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebookF } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
+
 
 const ComingSoon = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_tpzmvkf",
+        "template_nam4zt6",
+        form.current,
+        "uvq3fuFRXafvsKCGC"
+      )
+      .then(
+        (result) => {
+          e.target.reset();
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const targetDate = new Date("2023-08-30"); // Replace with your target date
   const [countdown, setCountdown] = useState(calculateCountdown());
 
@@ -39,7 +64,7 @@ const ComingSoon = () => {
             <h1 className="md:text-[54px] text-[32px] leading-snug font-axiforma font-normal ">
               Discover the Future of{" "}
               <span className="bg-gradient-to-r from-[#7F31FF] to-[#E34607] text-transparent bg-clip-text">
-                Online privacy
+                Online Privacy
               </span>{" "}
               with LuraVPN.
             </h1>
@@ -75,13 +100,22 @@ const ComingSoon = () => {
               Get ready to embark on a cosmic digital adventure with LuraVPN.
             </div>
             <div className="mt-6 w-[90%] sm:w-2/3 mx-auto">
-              <form className="grid md:grid-cols-2 font-axiforma gap-2">
+              <form
+                ref={form}
+                onSubmit={sendEmail}
+                className="grid md:grid-cols-2 font-axiforma gap-2"
+              >
                 <input
-                  name="waitList"
+                  name="user_email"
+                  type="email"
+                  required
                   placeholder="Enter your email address"
                   className="text-sm pl-2 w-full py-4 font-normal md:rounded-sm rounded-lg text-black"
                 />
-                <button className="font-medium py-4 md:text-md text-sm rounded-lg sm:rounded-r-lg sm:rounded-none  bg-[#5D18EB]">
+                <button
+                  type="submit"
+                  className="font-medium py-4 md:text-md text-sm rounded-lg sm:rounded-r-lg sm:rounded-none  bg-[#5D18EB]"
+                >
                   Notify Me when Lura is Live
                 </button>
               </form>
