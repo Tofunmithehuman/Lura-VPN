@@ -1,8 +1,30 @@
 import Layout from "@/layout/Layout";
 import React from "react";
 import { BsCheckLg } from "react-icons/bs";
+import Link from "next/link";
+import { useRouter } from "next/router";
+
+const infoLinks = [
+  {
+    name: "Security Measures",
+    href: "/security",
+  },
+  {
+    name: "Information documentation",
+    href: "/informationReq",
+  },
+  {
+    name: "Privacy terms",
+    href: "/privacy",
+  },
+  {
+    name: "Information we collect",
+    href: "/informationCol",
+  },
+];
 
 const Security = () => {
+  const router = useRouter()
   return (
     <Layout>
       <div className="securityGradient py-16 px-8 md:px-20 text-white font-axiforma">
@@ -10,130 +32,111 @@ const Security = () => {
           Security
         </h1>
         <div className="grid md:grid-cols-[1.2fr,1fr] items-start">
-          <div className="text-xs">
-            <p className="mb-4">Effective: December 22, 2022</p>
-            <p className="mb-4">
-              This Privacy Policy describes how Loom collects, uses, and shares
-              your personal information, as well as your choices and rights with
-              respect to your personal information. Scope of this Privacy Policy
-              This Privacy Policy applies to information that relates to you as
-              an identifiable individual (often referred to as “personal
-              information” or “personal data”) that Loom receives or collects
-              when you interact with us or our services, website, and software
-              (the “Services”). This Privacy Policy does not apply to any
-              third-party services, websites, or software, such as third-party
-              applications that may be integrated into our Services via API.
-              Those services, websites, and software are subject to their own
-              terms and privacy policies, and you should read those carefully.
+          <div className="text-xs font-light">
+            <p className="">
+              At LuraVPN, we are committed to ensuring the highest level of
+              security for our users. We employ a range of comprehensive
+              security measures to protect your data and provide a secure VPN
+              experience. Here is an overview of the security measures
+              implemented by LuraVPN:
             </p>
-            <div className="my-2">
-              <h4 className="mb-2">Information We Collect We collect</h4>
-              <p>We collect and receive the following types of information:</p>
+            <div className="mt-4 font-bold">1. Encryption Standards</div>
+            <div>
+              We utilize AES-256 encryption, which is widely recognized as one
+              of the most secure encryption standards available. This strong
+              encryption ensures that your data remains private and protected as
+              it travels between your device and our VPN servers.
             </div>
-            <div className="mt-4">Information You Provide to Us:</div>
-            <ul className="list-disc pl-4">
-              <li>
-                Account Information: To create an account for the Services or to
-                enable certain features, we require that you provide us with
-                information for your account such as name, email, password, and
-                authentication credentials. If you sign up for a paid
-                subscription, we (or our payment processors) may need your
-                billing details such as credit card information, banking
-                information, and billing address.
-              </li>
-              <li>
-                Video and Other Customer Data: In using our Services, our
-                customers submit or upload video recordings, seek user support,
-                or provide other Customer Data (defined in our Terms of Service)
-                to us.Our use of and processing of Customer Data is governed by
-                our Terms of Service.
-              </li>
-              <li>
-                Other Information You Provide: We receive other information from
-                you when you choose to interact with us in other ways, such as
-                if you sign up for one of our webinars or e-books, participate
-                in a research study, contest, sweepstake, or event, apply for a
-                job, or otherwise communicate with us.
-              </li>
-            </ul>
-            <div className="mt-4">Information We Collect Automatically:</div>
-            <ul className="list-disc pl-4">
-              <li>
-                Usage Data: We automatically collect usage data about how you
-                interact with our Services when you use them. For example, this
-                could be actions you take on our platform, such as number of
-                videos you’ve recorded or viewed, your sharing activity, or what
-                third-party integrations you enabled.
-              </li>
-              <li>
-                Log Data: Our servers automatically log certain types of data
-                when you visit or use our Services, for example, when you
-                navigate through our website. This data is stored in our log
-                files and includes, Internet Protocol (IP) address, type of
-                device, operating system or browser, unique device identifiers,
-                browser settings, date and time you visited or used our
-                Services, the referring website, URL parameters, and error and
-                crash reporting data.
-              </li>
-              <li>
-                Information from Cookies and Similar Technologies: A cookie is a
-                small piece of information that is downloaded to your device by
-                your browser when you visit a website. We use cookies or similar
-                technologies (including third-party cookies) to remember your
-                preferences, understand how you interact with our Services or
-                emails that we send you, maintain the security of our Services,
-                and administer, improve and promote our Services. You can
-                configure your browser to prevent cookies, but please note that
-                disabling cookies may make some features or functionality
-                unavailable to you. For more information about the cookies we
-                use, please see our Cookie Policy.
-              </li>
-            </ul>
+            <div className="mt-4 font-bold">2. Secure VPN Protocols</div>
+            <p>
+              LuraVPN supports industry-standard VPN protocols, such as OpenVPN
+              and IKEv2/IPSec. These protocols establish secure and encrypted
+              connections between your device and our servers, ensuring the
+              confidentiality and integrity of your data.
+            </p>
+            <div className="mt-4 font-bold">3. No-Logs Policy</div>
+            <p>
+              We strictly adhere to a no-logs policy, meaning we do not monitor,
+              record, or store any user activity logs. We respect your privacy
+              and believe in preserving the anonymity and confidentiality of
+              your online activities.
+            </p>
+            <div className="mt-4 font-bold">4. Kill Switch</div>
+            <p>
+              LuraVPN incorporates a kill switch feature in its applications. In
+              the event of an unexpected VPN connection drop, the kill switch
+              immediately terminates your internet connection, preventing any
+              unsecured data transmission or exposure.
+            </p>
+            <div className="mt-4 font-bold">5. DNS Leak Protection</div>
+            <p>
+              Our VPN service includes built-in DNS leak protection. This
+              feature ensures that DNS requests originating from your device are
+              encrypted and routed through our VPN servers, preventing any
+              potential DNS leaks that could reveal your browsing activity.
+            </p>
+            <div className="mt-4 font-bold">
+              6. Multi-Factor Authentication (MFA)
+            </div>
+            <p>
+              To enhance the security of your LuraVPN account, we offer optional
+              multi-factor authentication. By enabling MFA, you add an extra
+              layer of protection to your account, requiring a verification code
+              in addition to your login credentials.
+            </p>
+            <div className="mt-4 font-bold">7. Advanced Malware Protection</div>
+            <p>
+              LuraVPN incorporates advanced malware protection using artificial
+              intelligence and machine learning algorithms. This helps identify
+              and block potential threats, providing an additional layer of
+              security to keep you safe from malicious activities.
+            </p>
+            <div className="mt-4 font-bold">8. Regular Security Audits</div>
+            <p>
+              We conduct regular security audits of our systems, infrastructure,
+              and applications to identify and address any vulnerabilities. This
+              proactive approach allows us to ensure that our security measures
+              are up to date and capable of protecting our users` data.
+            </p>
+            <div className="mt-4 font-bold">9. Server Security</div>
+            <p>
+              We employ robust security measures to protect our servers,
+              including secure data centres, firewalls, and regular security
+              updates. Our servers are continuously monitored to mitigate
+              potential risks and maintain the highest level of security.
+            </p>
             <div className="mt-4">
-              Information We Receive from Third Parties:
+              At LuraVPN, we are committed to maintaining the security and
+              privacy of our users. By implementing these security measures, we
+              strive to create a safe and secure VPN environment for all our
+              users.
             </div>
-            <ul className="list-disc pl-4">
-              <li>
-                Information We Receive from Third Parties: Third-Party
-                Integrations: Third parties may create integrations built on
-                Loom technology so that their applications can interoperate with
-                Loom. If you choose to enable an integration, the third-party
-                may share some information about you with us to make your
-                experience more seamless, such as your name, email, or other
-                content or information needed to facilitate the integration.
-                Additionally, if you sign up or login to our Services using one
-                of our single-sign-on providers (e.g., Google, Apple, etc.), we
-                collect authentication information provided to us by the
-                provider to allow you to log in.
-              </li>
-              <li>
-                Marketing Information: We may receive marketing or demographic
-                information about you from third parties or partners, for
-                example, data about your organization or industry or other
-                public information from sources like social media or online
-                professional profiles. We may combine this information with
-                other data we already have to improve your experience with our
-                Services or inform you of Services we think may be of interest
-                to you.
-              </li>
-            </ul>
           </div>
           <div className=" grid justify-center">
             <div className="p-[1px] termsBorder rounded-2xl">
               <div className="min-h-40 hidden md:grid rounded-2xl bg-[#151414] p-6 text-sm capitalize px-10 justify-center gap-6 font-medium">
-                <div className="flex items-center gap-2">
-                  <BsCheckLg className="text-green-500" />
-                  <p>Security</p>
-                </div>
-                <div>
-                  <p className="text-[#3E3F3E]">Information documentation</p>
-                </div>
-                <div>
-                  <p className="text-[#3E3F3E]">Privacy terms</p>
-                </div>
-                <div>
-                  <p className="text-[#3E3F3E]">Information we collect</p>
-                </div>
+                {infoLinks.map((item, index) => {
+                  return (
+                    <Link
+                      href={item.href}
+                      key={index}
+                      className="flex items-center gap-2"
+                    >
+                      {router.pathname === item.href && (
+                        <BsCheckLg className="text-green-500" />
+                      )}
+                      <p
+                        className={`${
+                          router.pathname === item.href
+                            ? "text-white"
+                            : "text-[#3e3f3e]"
+                        }`}
+                      >
+                        {item.name}
+                      </p>
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>

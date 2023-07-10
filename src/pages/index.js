@@ -1,11 +1,10 @@
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import luraLogo from "../../public/LURa.svg";
 import { SiTwitter } from "react-icons/si";
 import { LuInstagram } from "react-icons/lu";
 import { FaFacebookF } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
-
 
 const ComingSoon = () => {
   const form = useRef();
