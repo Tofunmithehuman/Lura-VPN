@@ -7,7 +7,7 @@ const IPcheck = () => {
   useEffect(() => {
     const getIpAddress = function () {
       fetch(
-        `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_f0ebEvOiz1WirhNs0M7nRUyvltt6o&ipAddress=0`
+        `https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_zWLJ0N3Y647x55y0qippC8NVpWB2i&ipAddress=8.8.8.8`
       )
         .then((response) => response.json())
         .then((data) => {
