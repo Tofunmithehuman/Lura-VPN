@@ -3,6 +3,17 @@ import React from "react";
 import { BsCheckLg } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import TermsOfPower from "@/components/Terms/TermsOfPower";
+import Copyright from "@/components/Terms/Copyright";
+import DcmaPolicy from "@/components/Terms/DcmaPolicy";
+import CustomTerms from "@/components/Terms/CustomTerms";
+import Compliance from "@/components/Terms/Compliance";
+import Privacy from "@/components/Terms/Privacy";
+import InformationWeCollect from "@/components/Terms/InformationWeCollect";
+import HowWeUseInfo from "@/components/Terms/HowWeUseInfo";
+import CookiePolicy from "@/components/Terms/CookiePolicy";
+import LegalAndPrivacy from "@/components/Terms/LegalAndPrivacy";
+import Security from "@/components/Terms/Security";
 
 const infoLinks = [
   {
@@ -18,8 +29,8 @@ const infoLinks = [
     href: "/termsPower",
   },
   {
-    name: "Custom Terms",
-    href: "/",
+    name: "Copyright Terms",
+    href: "/copyright",
   },
   {
     name: "Privacy terms",
@@ -31,11 +42,15 @@ const infoLinks = [
   },
   {
     name: "How we use",
-    href: "/",
+    href: "/howInfoUsed",
   },
   {
     name: "Cookie Policy",
     href: "/cookie",
+  },
+  {
+    name: "Custom Terms",
+    href: "/customTerms",
   },
   {
     name: "Legal and privacy fAQ",
@@ -50,6 +65,10 @@ const infoLinks = [
     href: "/security",
   },
   {
+    name: "DCMA Policy",
+    href: "/dcmaPolicy",
+  },
+  {
     name: "Open source software",
     href: "/",
   },
@@ -60,7 +79,7 @@ const Terms = () => {
   return (
     <Layout>
       <div className="termsGradient py-16 px-8 md:px-20 text-white font-axiforma">
-        <h1 className="text-3xl sm:text-5xl w-[90%] mx-auto leading-relaxed text-center py-8 sm:py-16 font-axiforma text-[#C9F4EA]">
+        <h1 className="text-3xl sm:text-5xl w-[90%] leading-relaxed text-left py-8 sm:pt-16 font-axiforma text-[#DFD1FB]">
           Terms of Service
         </h1>
         <div className="grid md:grid-cols-[1.2fr,1fr] items-start">
@@ -272,6 +291,17 @@ const Terms = () => {
                 page frequently.
               </p>
             </div>
+            <TermsOfPower />
+            <Copyright />
+            <DcmaPolicy />
+            <CustomTerms />
+            <Compliance />
+            <Privacy />
+            <InformationWeCollect />
+            <HowWeUseInfo />
+            <CookiePolicy />
+            <LegalAndPrivacy />
+            <Security />
           </div>
           <div className=" grid justify-center">
             <div className="p-[1px] termsBorder rounded-2xl">

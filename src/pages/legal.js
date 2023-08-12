@@ -18,8 +18,8 @@ const infoLinks = [
     href: "/termsPower",
   },
   {
-    name: "Custom Terms",
-    href: "/",
+    name: "Copyright Terms",
+    href: "/copyright",
   },
   {
     name: "Privacy terms",
@@ -31,11 +31,15 @@ const infoLinks = [
   },
   {
     name: "How we use",
-    href: "/",
+    href: "/howInfoUsed",
   },
   {
     name: "Cookie Policy",
     href: "/cookie",
+  },
+  {
+    name: "Custom Terms",
+    href: "/customTerms",
   },
   {
     name: "Legal and privacy fAQ",
@@ -48,6 +52,10 @@ const infoLinks = [
   {
     name: "Security Measures",
     href: "/security",
+  },
+  {
+    name: "DCMA Policy",
+    href: "/dcmaPolicy",
   },
   {
     name: "Open source software",

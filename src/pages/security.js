@@ -10,6 +10,10 @@ const infoLinks = [
     href: "/security",
   },
   {
+    name: "DCMA Policy",
+    href: "/dcmaPolicy",
+  },
+  {
     name: "Information documentation",
     href: "/informationReq",
   },
@@ -24,7 +28,7 @@ const infoLinks = [
 ];
 
 const Security = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Layout>
       <div className="securityGradient py-16 px-8 md:px-20 text-white font-axiforma">

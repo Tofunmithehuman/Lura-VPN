@@ -18,8 +18,8 @@ const infoLinks = [
     href: "/termsPower",
   },
   {
-    name: "Custom Terms",
-    href: "/",
+    name: "Copyright Terms",
+    href: "/copyright",
   },
   {
     name: "Privacy terms",
@@ -31,11 +31,15 @@ const infoLinks = [
   },
   {
     name: "How we use",
-    href: "/",
+    href: "/howInfoUsed",
   },
   {
     name: "Cookie Policy",
     href: "/cookie",
+  },
+  {
+    name: "Custom Terms",
+    href: "/customTerms",
   },
   {
     name: "Legal and privacy fAQ",
@@ -50,14 +54,17 @@ const infoLinks = [
     href: "/security",
   },
   {
+    name: "DCMA Policy",
+    href: "/dcmaPolicy",
+  },
+  {
     name: "Open source software",
     href: "/",
   },
 ];
 
-
 const TermsOfPower = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <Layout>
       <div className="privacyGradient py-16 px-8 md:px-20 text-white font-axiforma">

@@ -10,7 +10,7 @@ const navigation = [
   { name: "Home", to: "/home" },
   { name: "Features", to: "#features" },
   { name: "Pricing", to: "#pricing" },
-  { name: "Help", to: "/help" },
+  { name: "Help", to: "/help/general" },
 ];
 
 const NavBar = () => {
