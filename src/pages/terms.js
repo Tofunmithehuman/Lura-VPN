@@ -21,56 +21,56 @@ const infoLinks = [
     href: "/terms",
   },
   {
-    name: "Information documentation",
-    href: "/informationReq",
-  },
-  {
     name: "Terms of power",
-    href: "/termsPower",
+    href: "#termsPower",
   },
   {
     name: "Copyright Terms",
-    href: "/copyright",
-  },
-  {
-    name: "Privacy terms",
-    href: "/privacy",
-  },
-  {
-    name: "Information we collect",
-    href: "/informationCol",
-  },
-  {
-    name: "How we use",
-    href: "/howInfoUsed",
-  },
-  {
-    name: "Cookie Policy",
-    href: "/cookie",
-  },
-  {
-    name: "Custom Terms",
-    href: "/customTerms",
-  },
-  {
-    name: "Legal and privacy fAQ",
-    href: "/legal",
-  },
-  {
-    name: "Compliance",
-    href: "/compliance",
-  },
-  {
-    name: "Security Measures",
-    href: "/security",
+    href: "#copyright",
   },
   {
     name: "DCMA Policy",
-    href: "/dcmaPolicy",
+    href: "#dcmaPolicy",
+  },
+  {
+    name: "Custom Terms",
+    href: "#customTerms",
+  },
+  {
+    name: "Compliance",
+    href: "#compliance",
+  },
+  {
+    name: "Privacy terms",
+    href: "#privacy",
+  },
+  {
+    name: "Information we collect",
+    href: "#informationCol",
+  },
+  {
+    name: "How we use",
+    href: "#howInfoUsed",
+  },
+  {
+    name: "Cookie Policy",
+    href: "#cookie",
+  },
+  {
+    name: "Legal and privacy fAQ",
+    href: "#legal",
+  },
+  {
+    name: "Security Measures",
+    href: "#security",
+  },
+  {
+    name: "Information documentation",
+    href: "#informationReq",
   },
   {
     name: "Open source software",
-    href: "/",
+    href: "#",
   },
 ];
 
@@ -291,17 +291,39 @@ const Terms = () => {
                 page frequently.
               </p>
             </div>
-            <TermsOfPower />
-            <Copyright />
-            <DcmaPolicy />
-            <CustomTerms />
-            <Compliance />
-            <Privacy />
-            <InformationWeCollect />
-            <HowWeUseInfo />
-            <CookiePolicy />
-            <LegalAndPrivacy />
-            <Security />
+            <div id="termsPower">
+              <TermsOfPower />
+            </div>
+            <div id="copyright">
+              <Copyright />
+            </div>
+            <div id="dcmaPolicy">
+              <DcmaPolicy />
+            </div>
+            <div id="customTerms">
+              <CustomTerms />
+            </div>
+            <div id="compliance">
+              <Compliance />
+            </div>
+            <div id="privacy">
+              <Privacy />
+            </div>
+            <div id="informationCol">
+              <InformationWeCollect />
+            </div>
+            <div id="howInfoUsed">
+              <HowWeUseInfo />
+            </div>
+            <div id="cookie">
+              <CookiePolicy />
+            </div>
+            <div id="legal">
+              <LegalAndPrivacy />
+            </div>
+            <div id="security">
+              <Security />
+            </div>
           </div>
           <div className=" grid justify-center">
             <div className="p-[1px] termsBorder rounded-2xl">
