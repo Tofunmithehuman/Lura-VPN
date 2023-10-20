@@ -114,9 +114,9 @@ const Index = () => {
                 </span>{" "}
                 with the Power of AI Machine Learning.
               </h1>
-              <button className="bg-[#5D18EB] px-8 py-3 text-lg font-bold text-white dropWhite rounded-md font-axiforma">
+              <a href = "https://play.google.com/store/search?q=lura+vpn&c=apps" target="_blank" className="bg-[#5D18EB] px-8 py-3 text-lg font-bold text-white dropWhite rounded-md font-axiforma">
                 Get Started
-              </button>
+              </a>
               <div className="min-h-screen bg-backMoon bg-no-repeat bg-cover bg-bottom w-full mt-12">
                 <div className="flex justify-center">
                   <Image src={manOnMoon} alt="manOnMoon" />
