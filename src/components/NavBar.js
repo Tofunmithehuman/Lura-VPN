@@ -64,14 +64,12 @@ const NavBar = () => {
           )}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center font-semibold gap-6 text-md text-white">
-          <Link href={"/signIn"} className="text-[#B7B7B7]">
-            Login
-          </Link>
           <Link
-            href={"/signUp"}
+            href={"https://play.google.com/store/search?q=lura+vpn&c=apps"}
+            target="_blank"
             className="border text-white bg-[#5D18EB] border-none px-8 py-3 text-lg rounded-lg dropWhite"
           >
-            Sign Up{" "}
+            Download{" "}
           </Link>{" "}
         </div>
       </nav>
@@ -115,14 +113,12 @@ const NavBar = () => {
               </div>
               <div className="pt-10">
                 <div className="flex lg:flex-1 items-center mt-auto flex-col lg:flex-row font-semibold gap-3 text-lg text-white">
-                  <Link href={"/signIn"} className="text-white">
-                    Login
-                  </Link>
                   <Link
-                    href={"/signUp"}
+                    href={"https://play.google.com/store/search?q=lura+vpn&c=apps"}
+                    target="_blank"
                     className="border text-white bg-[#5D18EB] border-none text-lg mt-5 px-8 py-3 rounded-lg dropWhite"
                   >
-                    Sign Up{" "}
+                    Download{" "}
                   </Link>{" "}
                 </div>
               </div>
